@@ -54,11 +54,11 @@ This knowledge is valuable because it provides insights into teaching style, wor
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size:** 300 characters for Rate My Professors reviews; 500 characters for Reddit discussions thread.
+**Chunk size:** Variable-sized chunks based on natural document boundaries. Each Rate My Professors review is treated as a single chunk, and each Reddit reply/comment is treated as a single chunk. If an individual review or Reddit reply exceeds 1,000 characters, fixed-size chunking is used as a fallback with 500-character chunks.
 
-**Overlap:** 50 characters for Rate My Professors reviews; 100 characters for Reddit discussions thread.
+**Overlap:** No overlap is used when chunking by natural boundaries because complete reviews and replies already preserve context. For the fixed-size fallback strategy, a 100-character overlap is applied to maintain continuity across chunk boundaries.
 
-**Reasoning:** The majority of the collecton consists of short Rate My Professors reviews, making fixed-size chunking appropriate because these reviews are brief, usually a single opinion and to the point. However, reddit discussions tend to be longer and more conversational, so slightly larger chunks with greater overlap will be used to preserve context across comments and avoid splitting important information.
+**Reasoning:** Initial retrieval experiments using fixed-size chunking revealed that important ideas were sometimes split across chunk boundaries, particularly within Reddit discussions. Since Rate My Professors reviews and Reddit replies are naturally occurring semantic units that often express a complete opinion or experience, preserving these boundaries improves retrieval quality and produces more meaningful chunks. Fixed-size chunking is retained only as a fallback for unusually long reviews or comments that exceed 1,000 characters, ensuring that large pieces of text remain manageable while minimizing the loss of context.
 
 ---
 

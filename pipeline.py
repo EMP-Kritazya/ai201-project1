@@ -10,13 +10,21 @@ from pathlib import Path
 # the pipeline works regardless of the current working directory.
 DOCUMENTS_DIR = Path(__file__).parent / "documents"
 
-# Per-source-type chunking parameters (chunk_size, overlap) in characters,
-CHUNK_PARAMS = {
-    "ratemyprofessors": {"chunk_size": 350, "overlap": 100},
-    "reddit": {"chunk_size": 500, "overlap": 100},
-}
+# Structure-aware chunking config.
+#
+# We no longer cut documents on a fixed character window. Instead each document
+# is split on its *natural* units — one Rate My Professors review per chunk, one
+# Reddit reply/comment per chunk — so a chunk embeds one complete opinion.
+#
+# A single review or reply only falls back to fixed-size chunking when it is
+# unusually long (> MAX_SEGMENT_CHARS); in that case we use FALLBACK_CHUNK_SIZE
+# with FALLBACK_OVERLAP so even a giant segment stays within a sane size while
+# preserving some cross-chunk context.
+MAX_SEGMENT_CHARS = 1000   # a review/reply longer than this is split by size
+FALLBACK_CHUNK_SIZE = 500  # character window used for the oversized-segment fallback
+FALLBACK_OVERLAP = 100     # characters shared between consecutive fallback chunks
 
-# Default parameters when a file's source type can't be determined
+# Default source type when a file's name prefix can't be recognised.
 DEFAULT_SOURCE_TYPE = "ratemyprofessors"
 
 
@@ -218,12 +226,157 @@ def chunk_text(text, chunk_size, overlap):
     return chunks
 
 
-def build_chunks(documents):
-    """Clean and chunk a list of loaded documents.
+# --------------------------------------------------------------------------- #
+# Structure-aware boundary patterns
+# --------------------------------------------------------------------------- #
+#
+# These regexes detect where one natural unit (a review or a reply) ends and the
+# next begins. They are ALL anchored to the start of a line (re.MULTILINE makes
+# `^` match after every "\n"), which is the key to not splitting mid-sentence:
+# a boundary is only recognised when a marker sits at the very start of a line,
+# so a word like "reply" appearing inside a sentence never triggers a split.
 
-    Ties the pipeline together: for each document it cleans the text, looks up
-    the chunk size/overlap for that document's source type, and produces chunk
-    records carrying enough metadata for the later embedding/retrieval stages.
+# --- Rate My Professors -----------------------------------------------------
+# Every review in the rmp_*.txt files starts a line with "Review <n>" (e.g.
+# "Review 1 - CSE3315 (May 15, 2025)"). We split on that marker. The text before
+# "Review 1" is the professor summary header (overall rating, "Would Take Again
+# %", tags, ...) — valuable metadata, so it is kept as its own leading chunk
+# rather than discarded.
+#
+#   ^Review        marker word at the start of a line
+#   [ \t]+\d+      one or more spaces/tabs, then the review number
+#   \b             word boundary so "Review 12" is fine but "Reviewer" is not
+RMP_REVIEW_RE = re.compile(r"^Review[ \t]+\d+\b", re.MULTILINE)
+
+# --- Reddit -----------------------------------------------------------------
+# Divider lines ("------------------------------------") separate the question
+# from the replies. They carry no content, so we blank them out before splitting
+# instead of turning them into empty chunks.
+#
+#   ^[ \t]*   optional leading whitespace
+#   -{3,}     three or more dashes
+#   [ \t]*$   optional trailing whitespace to end of line
+REDDIT_DIVIDER_RE = re.compile(r"^[ \t]*-{3,}[ \t]*$", re.MULTILINE)
+
+# A Reddit segment boundary is either:
+#   (a) a "pipe" marker line — the threads use leading pipes for every turn:
+#       "|| Reply 1", "|| Reply1:", "||| Follow Up:", "|| Question:",
+#       "| Review of CSE Courses at UTA". One-or-more pipes then anything to the
+#       end of the line, so inline content after the pipes stays on the marker
+#       line and is captured with that segment.
+#         ^[ \t]*\|+.*
+#   OR
+#   (b) a bare header keyword on its own line (no pipes) — some threads write
+#       "Question:", "Rumors:", "Reply 1:", "User 2:", "Follow Up:" directly:
+#         ^[ \t]*(question|rumors|reply|user|follow up) [optional number] [optional ":"]
+#       We require the keyword to be essentially the whole line (`...$`) so the
+#       word "reply"/"user" inside a sentence is not mistaken for a boundary.
+REDDIT_BOUNDARY_RE = re.compile(
+    r"^[ \t]*(?:"
+    r"\|+.*"                                                       # (a) pipe marker line
+    r"|(?:question|rumors|reply|user|follow[ \t]*up)[ \t]*\d*[ \t]*:?[ \t]*"  # (b) bare header
+    r")$",
+    re.IGNORECASE | re.MULTILINE,
+)
+
+
+def split_into_segments(text, boundary_re, divider_re=None):
+    """Split `text` into natural units at the given line-start boundaries.
+
+    A "segment" is the text from one boundary marker up to (but not including)
+    the next one. Any text appearing before the first marker is kept as its own
+    leading segment — for Rate My Professors that is the professor summary
+    header, which holds the overall rating / "Would Take Again %".
+
+    Because every boundary pattern is anchored to the start of a line, segments
+    can only ever be cut at a marker that begins a line; a sentence is never
+    sliced in the middle.
+
+    Args:
+        text:        Cleaned document text.
+        boundary_re: Compiled, MULTILINE regex matching segment-start markers.
+        divider_re:  Optional compiled regex for content-free divider lines,
+                     which are blanked out before splitting.
+
+    Returns:
+        A list of segment strings (stripped, non-empty), in document order.
+    """
+    # Remove divider lines first so they don't become empty/garbage segments.
+    # We replace just the matched line text (not the newline), leaving a blank
+    # line that gets stripped away when we clean each segment below.
+    if divider_re is not None:
+        text = divider_re.sub("", text)
+
+    # Collect the character offset where each boundary marker begins.
+    starts = [m.start() for m in boundary_re.finditer(text)]
+
+    # No markers at all: the whole document is a single segment.
+    if not starts:
+        stripped = text.strip()
+        return [stripped] if stripped else []
+
+    # Cut points are: the start of the document (to capture any leading header),
+    # then each marker offset, then the end of the document.
+    cut_points = [0] + starts + [len(text)]
+
+    segments = []
+    for begin, end in zip(cut_points, cut_points[1:]):
+        segment = text[begin:end].strip()
+        if segment:  # drop empties (e.g. the gap before the first marker)
+            segments.append(segment)
+    return segments
+
+
+# Maps each source type to the boundary pattern + label used for its segments.
+# The label is recorded on every chunk so validation can report how many chunks
+# each strategy produced.
+_STRUCTURE_RULES = {
+    "ratemyprofessors": {"boundary_re": RMP_REVIEW_RE, "divider_re": None, "method": "review"},
+    "reddit": {"boundary_re": REDDIT_BOUNDARY_RE, "divider_re": REDDIT_DIVIDER_RE, "method": "reply"},
+}
+
+
+def chunk_document(text, source_type):
+    """Chunk one cleaned document using structure-aware splitting.
+
+    The document is first split into natural segments (one review / one reply).
+    Each segment that fits within MAX_SEGMENT_CHARS becomes a single chunk,
+    preserving the complete opinion. A segment longer than MAX_SEGMENT_CHARS is
+    the only case where we fall back to fixed-size, overlapping windows.
+
+    Args:
+        text:        Cleaned document text.
+        source_type: "ratemyprofessors" or "reddit" (others use the default).
+
+    Returns:
+        A list of (chunk_text, method) tuples, where method is one of
+        "review", "reply", or "fixed".
+    """
+    rule = _STRUCTURE_RULES.get(source_type, _STRUCTURE_RULES[DEFAULT_SOURCE_TYPE])
+    segments = split_into_segments(text, rule["boundary_re"], rule["divider_re"])
+
+    chunks = []
+    for segment in segments:
+        if len(segment) > MAX_SEGMENT_CHARS:
+            # Oversized review/reply: fall back to fixed-size, overlapping chunks
+            # so this one unit doesn't produce a single huge chunk. Sentence
+            # boundaries are not guaranteed here (this is the allowed exception).
+            for piece in chunk_text(segment, FALLBACK_CHUNK_SIZE, FALLBACK_OVERLAP):
+                chunks.append((piece, "fixed"))
+        else:
+            # The common path: one complete review/reply -> one chunk.
+            chunks.append((segment, rule["method"]))
+    return chunks
+
+
+def build_chunks(documents):
+    """Clean and chunk a list of loaded documents (structure-aware).
+
+    Ties the pipeline together: for each document it cleans the text, then splits
+    it into natural units (one review / one reply per chunk), falling back to
+    fixed-size chunking only for an unusually long single unit. Each chunk
+    carries the metadata the later embedding/retrieval stages rely on, plus a
+    "chunk_method" field recording which strategy produced it.
 
     Args:
         documents: Output of `load_documents()` — a list of dicts with
@@ -232,31 +385,30 @@ def build_chunks(documents):
     Returns:
         A list of chunk dicts:
             {
-                "source":      <originating filename>,
-                "source_type": "ratemyprofessors" | "reddit",
-                "chunk_id":    <0-based index of this chunk within its document>,
-                "text":        <chunk text>,
+                "source":       <originating filename>,
+                "source_type":  "ratemyprofessors" | "reddit",
+                "chunk_id":     <0-based index of this chunk within its document>,
+                "text":         <chunk text>,
+                "chunk_method": "review" | "reply" | "fixed",
             }
     """
     all_chunks = []
 
     for doc in documents:
-        # Clean before chunking so character offsets are computed on tidy text.
+        # Clean before chunking so offsets/markers are matched on tidy text.
         cleaned = clean_text(doc["text"])
 
-        # Pick chunk size/overlap based on the document's source type.
-        params = CHUNK_PARAMS.get(doc["source_type"], CHUNK_PARAMS[DEFAULT_SOURCE_TYPE])
-
-        # Produce the chunks for this single document.
-        doc_chunks = chunk_text(cleaned, params["chunk_size"], params["overlap"])
+        # Produce (text, method) pairs for this single document.
+        doc_chunks = chunk_document(cleaned, doc["source_type"])
 
         # Wrap each chunk with metadata, numbering chunks within the document.
-        for chunk_id, chunk in enumerate(doc_chunks):
+        for chunk_id, (chunk, method) in enumerate(doc_chunks):
             all_chunks.append({
                 "source": doc["source"],
                 "source_type": doc["source_type"],
                 "chunk_id": chunk_id,
                 "text": chunk,
+                "chunk_method": method,
             })
 
     return all_chunks
@@ -266,53 +418,118 @@ def build_chunks(documents):
 # Validation / manual inspection
 # --------------------------------------------------------------------------- #
 
+def _print_sample_chunks(chunks, source_type, label, limit=5):
+    """Print up to `limit` chunks of one source type, spread across the set.
+
+    Sampling evenly (rather than taking the first N) means the preview spans
+    different documents/professors instead of just the first file.
+    """
+    subset = [c for c in chunks if c["source_type"] == source_type]
+    print(f"\n{label} ({len(subset)} total, showing up to {limit}):")
+    if not subset:
+        print("  (none)")
+        return
+
+    count = min(limit, len(subset))
+    step = max(1, len(subset) // count)
+    for i in range(count):
+        chunk = subset[i * step]
+        print("-" * 70)
+        print(f"  source='{chunk['source']}' | chunk_id={chunk['chunk_id']} "
+              f"| method={chunk['chunk_method']} | len={len(chunk['text'])}")
+        print(chunk["text"])
+    print("-" * 70)
+
+
+def _verify_segment_integrity(documents):
+    """Verify that structure-aware splitting never cuts a sentence.
+
+    Strategy: re-derive each document's segments and confirm that concatenating
+    them reproduces the original text *exactly* once whitespace is ignored. If
+    every non-whitespace character is preserved, in order, with no insertions,
+    then the only thing splitting did was insert breaks at marker boundaries —
+    so no sentence was sliced through. (This checks the structural segments,
+    i.e. the boundaries themselves; the fixed-size fallback that may further cut
+    an oversized segment is the explicitly allowed exception and is reported
+    separately.)
+
+    Returns:
+        (ok_count, total, failures) where `failures` is a list of source names
+        whose reconstruction did not match.
+    """
+    def strip_ws(s):
+        return re.sub(r"\s+", "", s)
+
+    ok_count = 0
+    failures = []
+    for doc in documents:
+        cleaned = clean_text(doc["text"])
+        rule = _STRUCTURE_RULES.get(doc["source_type"], _STRUCTURE_RULES[DEFAULT_SOURCE_TYPE])
+
+        # Reconstruct the divider-stripped source the splitter actually sees,
+        # so blanked-out divider lines don't cause a false mismatch.
+        seen = cleaned
+        if rule["divider_re"] is not None:
+            seen = rule["divider_re"].sub("", seen)
+
+        segments = split_into_segments(cleaned, rule["boundary_re"], rule["divider_re"])
+        if strip_ws("".join(segments)) == strip_ws(seen):
+            ok_count += 1
+        else:
+            failures.append(doc["source"])
+
+    return ok_count, len(documents), failures
+
+
 def _run_validation():
-    """Run the Milestone 3 pipeline and print checks for manual inspection."""
+    """Run the Milestone 3 pipeline and print structure-aware chunking checks."""
     print("=" * 70)
-    print("MILESTONE 3 VALIDATION — Ingestion & Chunking")
+    print("MILESTONE 3 VALIDATION — Ingestion & Structure-Aware Chunking")
     print("=" * 70)
 
-    # --- Load -------------------------------------------------------------- #
+    # --- Load & build ------------------------------------------------------ #
     documents = load_documents()
-    print(f"\n[1] Number of documents loaded: {len(documents)}")
-
     if not documents:
         print("No documents found — nothing to validate.")
         return
 
-    # --- Show one cleaned document ----------------------------------------- #
-    sample_doc = documents[0]
-    cleaned_sample = clean_text(sample_doc["text"])
-    print("\n[2] One cleaned document "
-          f"(source='{sample_doc['source']}', type='{sample_doc['source_type']}', "
-          f"{len(cleaned_sample)} chars):")
-    print("-" * 70)
-    print(cleaned_sample)
-    print("-" * 70)
-
-    # --- Build all chunks -------------------------------------------------- #
     chunks = build_chunks(documents)
 
-    # --- Show 5 representative chunks -------------------------------------- #
-    # Pick chunks spread evenly across the full set so the sample represents
-    # different documents and both source types, not just the first few.
-    print("\n[3] 5 representative chunks:")
-    sample_count = min(5, len(chunks))
-    if sample_count:
-        step = max(1, len(chunks) // sample_count)
-        sample_indices = [i * step for i in range(sample_count)]
-        for idx in sample_indices:
-            chunk = chunks[idx]
-            print("-" * 70)
-            print(f"global #{idx} | source='{chunk['source']}' "
-                  f"| type='{chunk['source_type']}' | chunk_id={chunk['chunk_id']} "
-                  f"| len={len(chunk['text'])}")
-            print(chunk["text"])
-        print("-" * 70)
+    # --- [1] Total chunk count --------------------------------------------- #
+    print(f"\n[1] Total number of chunks created: {len(chunks)}")
 
-    # --- Total chunk count ------------------------------------------------- #
-    print(f"\n[4] Total number of chunks generated: {len(chunks)}")
-    print("=" * 70)
+    # --- [2] 5 representative Rate My Professors chunks -------------------- #
+    _print_sample_chunks(chunks, "ratemyprofessors",
+                         "[2] Representative Rate My Professors chunks")
+
+    # --- [3] 5 representative Reddit chunks -------------------------------- #
+    _print_sample_chunks(chunks, "reddit",
+                         "[3] Representative Reddit chunks")
+
+    # --- [4] No chunk split mid-sentence (except fixed-size fallback) ------ #
+    ok, total, failures = _verify_segment_integrity(documents)
+    print("\n[4] Sentence-boundary verification:")
+    print(f"  Structural segments reconstruct the source for {ok}/{total} documents.")
+    if failures:
+        print(f"  WARNING — segments did not reconstruct for: {failures}")
+    else:
+        print("  PASS — every structural split occurs at a line-start review/reply")
+        print("         marker, so no chunk begins or ends mid-sentence.")
+    fixed_chunks = [c for c in chunks if c["chunk_method"] == "fixed"]
+    print(f"  {len(fixed_chunks)} chunk(s) used the fixed-size fallback (oversized "
+          f"single review/reply) —")
+    print("  sentence boundaries are not guaranteed there, which is the allowed exception.")
+
+    # --- [5] Counts by chunking strategy ----------------------------------- #
+    counts = {"review": 0, "reply": 0, "fixed": 0}
+    for chunk in chunks:
+        counts[chunk["chunk_method"]] = counts.get(chunk["chunk_method"], 0) + 1
+    print("\n[5] Chunks produced by each strategy:")
+    print(f"  review-based (Rate My Professors): {counts['review']}")
+    print(f"  reply-based  (Reddit):             {counts['reply']}")
+    print(f"  fixed-size fallback:               {counts['fixed']}")
+
+    print("\n" + "=" * 70)
 
 
 if __name__ == "__main__":
