@@ -1,5 +1,6 @@
 from pathlib import Path
-
+import os
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 import chromadb
 from sentence_transformers import SentenceTransformer
 
