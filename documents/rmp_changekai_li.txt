@@ -1,0 +1,45 @@
+RATE MY PROFESSORS - CHENGKAI LI
+(Listed in source table as "Changekai Li")
+Source URL: https://www.ratemyprofessors.com/professor/1151666
+
+=== PROFESSOR SUMMARY ===
+Full Name: Chengkai Li
+School: University of Texas at Arlington
+Department: Computer Science
+Overall Quality Rating: 3.1 / 5
+Would Take Again: 25%
+Level of Difficulty: 3.7 / 5
+Total Ratings: 11
+Top Tags: Tough Grader, Beware of Pop Quizzes, Skip class? You won't pass
+
+=== STUDENT REVIEWS ===
+
+Review 1 - CSE5334 (Apr 5, 2022)
+Quality: 1.0 | Difficulty: 5.0
+Attendance: Mandatory | Grade: C+ | Textbook: N/A
+Tags: Tough grader, Get ready to read, Participation matters
+Comment: "No matter how hard you work on your project, he will just tell you that you copied and give you 0 or tell you to go in front of the student council."
+
+Review 2 - CSE4334 (Jan 2, 2019)
+Quality: 3.0 | Difficulty: 5.0
+Attendance: Not Mandatory | For Credit: Yes | Grade: A | Textbook: No
+Tags: Gives good feedback, Skip class? You won't pass, Beware of pop quizzes
+Comment: "Dr. Li is going to have very difficult quizzes and exams and labs but you will learn a lot...He curves a lot at the end."
+
+Review 3 - CSE5334 (Dec 14, 2018)
+Quality: 1.0 | Difficulty: 4.0
+Attendance: Not Mandatory | For Credit: Yes | Textbook: No
+Tags: Get ready to read, Skip class? You won't pass, Beware of pop quizzes
+Comment: "Good researcher bad professor."
+
+Review 4 - CSE5334 (Dec 8, 2018)
+Quality: 2.0 | Difficulty: 5.0
+Attendance: Not Mandatory | For Credit: Yes | Grade: B | Textbook: No
+Tags: Tough Grader, Beware of pop quizzes, Test heavy
+Comment: "Very tough grader. Quizzes are tricky and difficult. Assignments are easy."
+
+Review 5 - CSE5334 (May 25, 2016)
+Quality: 4.0 | Difficulty: 4.0
+Attendance: Not Mandatory | For Credit: Yes | Textbook: No
+Tags: None listed
+Comment: "Knowledgable & a great teacher...Honest, lot of attention to details...Loved the course."

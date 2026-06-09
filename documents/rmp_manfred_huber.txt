@@ -1,0 +1,49 @@
+RATE MY PROFESSORS - MANFRED HUBER
+Source URL: https://www.ratemyprofessors.com/professor/529522
+
+=== PROFESSOR SUMMARY ===
+Full Name: Manfred Huber
+School: University of Texas at Arlington
+Department: Computer Science
+Overall Quality Rating: 3.7 / 5
+Would Take Again: 77%
+Level of Difficulty: 3.9 / 5
+Total Ratings: 21
+
+Rating Distribution:
+- Awesome (5): 6 ratings
+- Great (4): 10 ratings
+- Good (3): 2 ratings
+- OK (2): 1 rating
+- Awful (1): 1 rating
+
+=== STUDENT REVIEWS ===
+
+Review 1 - CSE3315 (May 15, 2025)
+Quality: 1.0 | Difficulty: 5.0
+For Credit: Yes | Attendance: Not Mandatory | Textbook: Yes | Grade: D
+Comment: "Barely grade a few homework + 2 exam by early morning of the final day. All quiz are not even grade. If you are not feeling good about your grade drop before the grade posted."
+
+Review 2 - CSE3315 (May 1, 2025)
+Quality: 5.0 | Difficulty: 3.0
+Would Take Again: Yes
+Tags: Amazing lectures, Respected
+Comment: "Very passionate and knowledgeable professor. Class is pretty time consuming and the material is difficult, but Huber makes the exams easy to prep for, and he also grades very leniently."
+
+Review 3 - CSE4379 (Apr 24, 2025)
+Quality: 5.0 | Difficulty: 4.0
+For Credit: Yes | Attendance: Mandatory | Would Take Again: Yes
+Tags: Group projects, Caring, Accessible outside class
+Comment: "It's a fully lab-based class...Dr. Huber is excellent at helping out students and reasoning what could be going wrong in a complex system."
+
+Review 4 - CSE4360 (Jan 12, 2024)
+Quality: 5.0 | Difficulty: 4.0
+For Credit: Yes | Attendance: Not Mandatory | Textbook: Yes | Grade: B
+Tags: Group projects, Inspirational, Accessible outside class
+Comment: "The assignments were challenging and you will not be hand held through them, but the effort was worth it. Dr. Huber clearly enjoys teaching and is a joy to listen to."
+
+Review 5 - CSE4360 (Nov 27, 2023)
+Quality: 2.0 | Difficulty: 4.0
+For Credit: Yes | Textbook: N/A
+Tags: Group projects, Respected
+Comment: "Professor Huber is well respected in the department, and clearly knows his stuff. However, he will not respond to your emails which is frustrating."

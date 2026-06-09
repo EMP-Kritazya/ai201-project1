@@ -1,0 +1,43 @@
+RATE MY PROFESSORS - BAHRAM KHALILI
+Source URL: https://www.ratemyprofessors.com/professor/1055888
+
+=== PROFESSOR SUMMARY ===
+Full Name: Bahram Khalili
+School: University of Texas at Arlington
+Department: Computer Science
+Overall Quality Rating: 4.2 / 5
+Would Take Again: 83%
+Level of Difficulty: 2.8 / 5
+Total Ratings: 27
+Top Tags: Group projects, Amazing lectures, Test heavy
+
+=== STUDENT REVIEWS ===
+
+Review 1 - CSE3310 (Jan 3, 2025)
+Quality: 4.0 | Difficulty: 4.0
+Would Take Again: Yes | Textbook: N/A
+Tags: Group projects, Amazing lectures, Graded by few things
+Comment: "His lectures are amazing and engaging. Tests are memorization heavy: don't just rely on study guide. Start early on group project as it is most of your grade, and start learning android studio early on. He does not cover much about how to use Android Studio, so mostly self taught for project. There are also a few opportunities for extra credit."
+
+Review 2 - CSE3310 (Dec 23, 2024)
+Quality: 5.0 | Difficulty: 3.0
+Attendance: Mandatory | For Credit: Yes | Would Take Again: Yes | Grade: A | Textbook: N/A
+Tags: Group projects, Amazing lectures, Test heavy
+Comment: "I think he's a good professor who is great at explaining SE concepts. For exams there is a lot of memorization of his slides, must attend his class to know what'll be on it. You get to choose your groups for project and they are graded generously. He prefers games. For documentation, strictly stick to his guidelines otherwise you'll lose points"
+
+Review 3 - CSE3310 (Apr 15, 2024)
+Quality: 5.0 | Difficulty: 3.0
+Attendance: Mandatory | For Credit: Yes | Would Take Again: Yes | Grade: A | Textbook: N/A
+Tags: Participation matters, Group projects, Respected
+Comment: "Dr. Khalili is a great guy. His lectures are slides but he adds in stories and real world examples from industry and his decades of experience. His exams are memorization heavy but he tells you what will be on the exam. As for the group project you need to start early and work with your group but as long as you've put in the effort you will be good"
+
+Review 4 - SE2 (Jan 20, 2024)
+Quality: 5.0 | Difficulty: 3.0
+Attendance: Mandatory | For Credit: Yes | Would Take Again: Yes | Grade: A | Textbook: N/A | Online: Yes
+Comment: "You need to pay attention to Assignments as they have good weightage. Both the quizzes are not that difficult most of the questions are prepared from his PPTs. So If you put your efforts he may also change your grades based on improvement in scores"
+
+Review 5 - CSE3310 (Jul 5, 2023)
+Quality: 2.0 | Difficulty: 4.0
+Attendance: Not Mandatory | For Credit: Yes | Textbook: N/A
+Tags: Group projects, Graded by few things
+Comment: "The professor did not update any of the grades in canvas. The entire semester the grade said 'NA'. The group project grade was never announced when he said it would be the day of the final exam. TA was useless & was not available to answer questions. He was supposed to add things to canvas for the class to turn in and update grades but never did."

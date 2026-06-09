@@ -1,0 +1,49 @@
+RATE MY PROFESSORS - BOB WEEMS
+Source URL: https://www.ratemyprofessors.com/professor/432105
+
+=== PROFESSOR SUMMARY ===
+Full Name: Bob Weems
+School: University of Texas at Arlington
+Department: Computer Science
+Overall Quality Rating: 3.0 / 5
+Would Take Again: 49%
+Level of Difficulty: 3.4 / 5
+Total Ratings: 84
+
+Rating Distribution:
+- Awesome (5): 27 ratings
+- Great (4): 11 ratings
+- Good (3): 9 ratings
+- OK (2): 9 ratings
+- Awful (1): 28 ratings
+
+=== STUDENT REVIEWS ===
+
+Review 1 - CSE3318 (May 1, 2025)
+Quality: 1.0 | Difficulty: 5.0
+For Credit: Yes | Attendance: Not Mandatory | Textbook: N/A | Grade: B
+Tags: Tough grader, Lecture heavy, Test heavy
+Comment: Student criticizes teaching clarity, noting "exams are the majority of the grade (80%)" and suggests many positive reviews may be fabricated.
+
+Review 2 - CSE3318 (Apr 17, 2025)
+Quality: 1.0 | Difficulty: 5.0
+Attendance: Not Mandatory | Textbook: N/A | Grade: B
+Tags: Tough grader
+Comment: Brief negative assessment with allegation of fake reviews.
+
+Review 3 - CSE3318 (Apr 14, 2025)
+Quality: 1.0 | Difficulty: 5.0
+For Credit: Yes | Attendance: Not Mandatory | Textbook: N/A | Grade: C
+Comment: Claims professor is "the worst in the entire CSE department" with poor teaching and fabricated reviews.
+
+Review 4 - CSE3318 (Apr 5, 2025)
+Quality: 1.0 | Difficulty: 5.0
+For Credit: Yes | Attendance: Not Mandatory | Textbook: N/A | Grade: Drop/Withdrawal
+Tags: Test heavy, Graded by few things
+Comment: Student notes "15 of his 5-star reviews were posted on the same day (Oct 5th, 2023)" and criticizes lecture effectiveness.
+
+Review 5 - CSE3318 (Mar 13, 2025)
+Quality: 1.0 | Difficulty: 4.0
+For Credit: Yes | Attendance: Not Mandatory | Textbook: N/A | Grade: D
+Tags: Lecture heavy, Test heavy
+Comment: Brief statement: student advises avoiding the class.

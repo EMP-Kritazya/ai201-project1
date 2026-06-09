@@ -1,0 +1,44 @@
+RATE MY PROFESSORS - LINDA BARASCH
+Source URL: https://www.ratemyprofessors.com/professor/619690
+
+=== PROFESSOR SUMMARY ===
+Full Name: Linda Barasch
+School: University of Texas at Arlington
+Department: Computer Science
+Overall Quality Rating: 3.7 / 5
+Would Take Again: 66%
+Level of Difficulty: 4.0 / 5
+Total Ratings: 59
+Top Tags: Beware of pop quizzes, Lecture heavy, Test heavy
+
+=== STUDENT REVIEWS ===
+
+Review 1 - CSE3315 (Apr 28, 2026)
+Quality: 3.0 | Difficulty: 5.0
+Attendance: Mandatory | For Credit: Yes | Textbook: Yes | Grade: C+
+Tags: Beware of pop quizzes, Test heavy
+Comment: "80% of the grade is from exams. Very little chance to recover if you mess up one of three exams. Overall very nice professor that explains a very hard topic well. Pop quizzes are random and are worth 15%, making attendance mandatory. I suggest taking a different professor because the weighting is brutal."
+
+Review 2 - CSE3315 (Dec 17, 2025)
+Quality: 5.0 | Difficulty: 2.0
+Attendance: Mandatory | For Credit: Yes | Textbook: Yes | Grade: A | Would Take Again: Yes
+Tags: Extra credit, Beware of pop quizzes, Lecture heavy
+Comment: "Great lectures, be sure to download notes on your ipad if you can to follow along. Concept is really hard but she breaks its down pretty well. Pop quizzes so I guess attendance is mandatory. Allows you to drop lowest quiz grade if you participate hw questions. At the end she gave us an extra cred assignment that boosts your grade by half a letter."
+
+Review 3 - CSE1310 (Aug 2, 2025)
+Quality: 5.0 | Difficulty: 5.0
+Attendance: Mandatory | For Credit: Yes | Textbook: N/A | Grade: A+ | Would Take Again: Yes
+Tags: Participation matters, Beware of pop quizzes, Lecture heavy
+Comment: "pls go to office hours it saved my grade"
+
+Review 4 - CSE3315 (May 14, 2024)
+Quality: 5.0 | Difficulty: 4.0
+Attendance: Mandatory | For Credit: Yes | Textbook: N/A | Grade: A | Would Take Again: Yes
+Tags: Beware of pop quizzes, Caring, Test heavy
+Comment: "CSE 3315 is a difficult class that requires effort but Dr. Barasch tries her best to help students succeed through her comprehensive lectures and adequate curves. I do not like the pop quizzes but many are dropped and there is a homework every week. Tests do not have much time except for the finals where you have 2.5 hrs to do a 1.5 hr test."
+
+Review 5 - CSE3315 (May 29, 2023)
+Quality: 5.0 | Difficulty: 4.0
+Attendance: Not Mandatory | For Credit: Yes | Textbook: Yes | Grade: A | Would Take Again: Yes
+Tags: Tough grader, Lots of homework, Lecture heavy
+Comment: "I feel like this class is just another math class. At the start of any math class, you need to solve lots of questions to get comfortable with the topic, and that's literally what you'd do for this class. Make sure when you study for the exams, to set a timer because the exams are long with very short timing. The prof tries her best to make it easy"

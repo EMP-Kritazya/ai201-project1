@@ -1,0 +1,44 @@
+RATE MY PROFESSORS - MARIKA APOSTOLOVA
+Source URL: https://www.ratemyprofessors.com/professor/2925654
+
+=== PROFESSOR SUMMARY ===
+Full Name: Marika Apostolova
+School: University of Texas at Arlington
+Department: Computer Science
+Overall Quality Rating: 3.3 / 5
+Would Take Again: 60%
+Level of Difficulty: 2.6 / 5
+Total Ratings: 35
+Top Tags: Group projects, Caring, Accessible outside class, Extra credit
+
+=== STUDENT REVIEWS ===
+
+Review 1 - CSE1320 (Dec 17, 2025)
+Quality: 5.0 | Difficulty: 3.0
+For Credit: Yes | Attendance: Not Mandatory | Grade: B+ | Textbook: N/A | Would Take Again: Yes
+Tags: Group projects, Caring, Accessible outside class
+Comment: "She is pretty fair and lenient with grading. All she asks is that you do your best in class. Assignments are easy. The only really difficult thing is the paper exams she gives. My advice to incoming students is to PRACTICE, PRACTICE writing your code on paper!! Memorization of terms and definitions will not help on the exam!"
+
+Review 2 - CSE1325 (Dec 12, 2025)
+Quality: 5.0 | Difficulty: 1.0
+For Credit: Yes | Attendance: Not Mandatory | Grade: A | Textbook: N/A | Would Take Again: Yes
+Tags: Extra credit, Group projects, Caring
+Comment: "Kind and chill professor who actually cares about her students. Self-directed labs, as well as the group project, are simple enough. The quizzes and exams are a bit tricky, but, as long as you studied beforehand, they shouldn't be too difficult. Additionally, she offers an additional 7 points worth of extra credit."
+
+Review 3 - CSE1320 (Oct 31, 2025)
+Quality: 2.0 | Difficulty: 2.0
+For Credit: Yes | Attendance: Not Mandatory | Grade: B+ | Textbook: N/A
+Tags: Get ready to read, Group projects, Caring
+Comment: "uhhh uhhh uh let me think... her lectures are very hard to follow she constantly fills blanks space with uhh. She reads off powerpoint slides and there is homework every weekend which is one coding assignment which isn't bad but its really hard to keep up in this class just paying attention to lecture so. Exams on paper, and every few weeks a quiz."
+
+Review 4 - CSE1320 (Aug 23, 2025)
+Quality: 4.0 | Difficulty: 2.0
+For Credit: Yes | Attendance: Not Mandatory | Grade: A | Textbook: N/A | Would Take Again: Yes
+Tags: Extra credit, Group projects, Caring
+Comment: "She is very kind, it is very clear she cares about her students and wants them to succeed. Sure, the exams are on paper but they are graded leniently. The group project/presentation are not anything to be worried about either. Overall, very straightforward class and helpful professor."
+
+Review 5 - CSE1320 (Jul 15, 2025)
+Quality: 3.0 | Difficulty: 1.0
+For Credit: Yes | Attendance: Not Mandatory | Grade: A+ | Textbook: N/A | Would Take Again: Yes
+Tags: Extra credit, Group projects, Accessible outside class
+Comment: "You're pretty much just graded on 5 quizzes, the exams, and group project. The quizzes can be tricky, the exams are hard but she is an easy grader, and the group project is an easy A. She gives many opportunities for extra credit. She is very monotone so lectures are hard to listen to, but she provides the slideshow to look back at. Very chill!"

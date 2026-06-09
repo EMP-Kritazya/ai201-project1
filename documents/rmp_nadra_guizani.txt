@@ -1,0 +1,39 @@
+RATE MY PROFESSORS - NADRA GUIZANI
+Source URL: https://www.ratemyprofessors.com/professor/2635253
+
+=== PROFESSOR SUMMARY ===
+Full Name: Nadra Guizani
+School: University of Texas at Arlington
+Department: Computer Science and Electrical Engineering
+Overall Quality Rating: 3.0 / 5
+Would Take Again: 50%
+Level of Difficulty: 2.8 / 5
+Total Ratings: 24
+Top Tags: Group projects, Lots of homework, Clear grading criteria
+
+=== STUDENT REVIEWS ===
+
+Review 1 - CSE3330 (May 21, 2025)
+Quality: 5.0 | Difficulty: 3.0
+Attendance: Not Mandatory | For Credit: Yes | Grade: A | Textbook: N/A | Online: Yes
+Comment: "Hybrid class. We had 2 database group projects, she lets you pick your group. Each chapter has a quiz (online/irl), and a chapter review. There are 2 exams and they are SQL query heavy so be sure to learn and understand the queries. Clear grading criteria for the projects. In person demos are required for the projects. She is very understanding!"
+
+Review 2 - CSE3330 (Dec 16, 2024)
+Quality: 4.0 | Difficulty: 3.0
+Attendance: Not Mandatory | For Credit: Yes | Grade: A | Textbook: N/A
+Comment: "There are 2 group projects where first is easy 2nd one hard but graded not too harsh. Exams are easy-moderate due to plenty of practice in class. TA can sometimes nick random points off but that doesn't affect overall grade too much. A is achievable with some effort and paying attention in class. Group project could also be done solo perfectly well"
+
+Review 3 - CSE3330 (Dec 16, 2024)
+Quality: 4.0 | Difficulty: 3.0
+Attendance: Not Mandatory | For Credit: Yes | Grade: A | Textbook: N/A
+Comment: "There are 2 group projects where first is pretty easy, second one is a bit hard though not graded too harsh. Exams are easy because she gives you plenty of practice in class. Lectures are mostly online and recorded. Pretty responsive on teams but wont reply to emails. TA sometimes nick random points off but dont affect your overall grade too much."
+
+Review 4 - CSE4309 (Dec 13, 2024)
+Quality: 1.0 | Difficulty: 5.0
+Attendance: Not Mandatory | For Credit: Yes | Grade: A | Textbook: N/A
+Comment: "Avoid this class at all costs. She is unreachable. ML class is significant. She doesn't reply to emails at all. If you are applying for a master's/PhD, you need LOR from an ML professor but she doesn't care. She won't reply to assignments, exams, or questions. Take another ML class if available."
+
+Review 5 - CSE3330 (Oct 22, 2024)
+Quality: 2.0 | Difficulty: 4.0
+Attendance: Mandatory | For Credit: Yes | Grade: Not disclosed | Textbook: Yes
+Comment: "Not very accessible outside of class, some emails receive a response at 11 pm the night the homework was due. Friendly but not very organized as the syllabus did not include timing for when we would get the project and the exam dates were posted later in the semester. Ended up as a hybrid style class. 2 exams and 2 projects."

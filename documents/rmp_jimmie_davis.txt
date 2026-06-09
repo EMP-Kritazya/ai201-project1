@@ -1,0 +1,44 @@
+RATE MY PROFESSORS - JIMMIE DAVIS
+Source URL: https://www.ratemyprofessors.com/professor/2218914
+
+=== PROFESSOR SUMMARY ===
+Full Name: Jimmie Davis
+School: University of Texas at Arlington
+Department: Computer Science
+Overall Quality Rating: 3.1 / 5
+Would Take Again: 47%
+Level of Difficulty: 3.1 / 5
+Total Ratings: 61
+Top Tags: Accessible outside class, Gives good feedback, Hilarious
+
+=== STUDENT REVIEWS ===
+
+Review 1 - CSE3310 (May 2, 2026)
+Quality: 5.0 | Difficulty: 2.0
+Attendance: Mandatory | For Credit: Yes | Textbook: Yes | Grade: A
+Tags: Gives good feedback, Hilarious, Accessible outside class
+Comment: "absolutely amazing professor. i was originally trying to join different section but i am SO happy i went for mr. bud davis' section instead! he's a funny and clearly cares about the material lectured. i will say, you DO have to put in the work for the project, but he is flexible with due dates (within reason!) and very accessible outside of class!"
+
+Review 2 - CSE3310 (Apr 3, 2026)
+Quality: 5.0 | Difficulty: 2.0
+Attendance: Mandatory | For Credit: Yes | Textbook: Yes | Grade: A
+Tags: Group projects, Hilarious, Accessible outside class
+Comment: "Awesome professor. I don't know why people didn't like him in the past. Super nice and funny. Would recommend."
+
+Review 3 - CSE3310 (Feb 26, 2026)
+Quality: 5.0 | Difficulty: 1.0
+Attendance: Mandatory | For Credit: Yes | Textbook: Yes | Grade: A
+Tags: Group projects
+Comment: "Professor Davis is very flexible and understanding. His exam format includes multiple-choice questions. The review materials he provides are extremely helpful and closely reflect the exam content. I was once very close to the next letter grade, and after reaching he was considerate and adjusted my final grade. I highly recommend taking his class."
+
+Review 4 - CSE3310 (Jan 13, 2026)
+Quality: 5.0 | Difficulty: 2.0
+Attendance: Mandatory | For Credit: Yes | Textbook: Yes | Grade: A+
+Tags: Group projects, Gives good feedback, Caring
+Comment: "Fun professor to take for 3310. His passion for the material really shows with his lighthearted tone during lectures. The class project was really fun and taught me a lot about Java. He really takes past criticism well by trying to improve his teaching methods and going easier on students. Attendance mandatory and lecture heavy. Take him if you can"
+
+Review 5 - CSE3310 (Dec 20, 2025)
+Quality: 5.0 | Difficulty: 3.0
+Attendance: Mandatory | For Credit: Yes | Textbook: Yes | Grade: A+
+Tags: Extra Credit, Group projects, Accessible outside class
+Comment: "He's the nicest professor. Exams are multiple choice and he gives out reviews for both exams. There's a group project that makes up for almost half of grades. He's very flexible on due dates and provides study materials. Overall, he's a great professor."

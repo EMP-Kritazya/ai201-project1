@@ -1,0 +1,39 @@
+RATE MY PROFESSORS - BHANU JAIN
+Source URL: https://www.ratemyprofessors.com/professor/2473801
+
+=== PROFESSOR SUMMARY ===
+Full Name: Bhanu Jain
+School: University of Texas at Arlington
+Department: Computer Science and Engineering
+Overall Quality Rating: 2.7 / 5
+Would Take Again: 39%
+Level of Difficulty: 3.4 / 5
+Total Ratings: 80
+Top Tags: Mandatory attendance, Group projects, Extra credit, Participation matters
+
+=== STUDENT REVIEWS ===
+
+Review 1 - CSE3318 (May 4, 2026)
+Quality: 4.0 | Difficulty: 3.0
+Attendance: Mandatory | For Credit: Yes | Textbook: Yes | Grade: A
+Comment: "Mandatory attendance, expects class to participate in lectures, really easy hw, 4 hws, 4 tests, tests based off of slides. You could easily skip every class and still pass her tests, but she has mandatory attendance, with absolutely pointless lectures"
+
+Review 2 - CSE3318 (May 16, 2025)
+Quality: 3.0 | Difficulty: 3.0
+Grade: B | Would Take Again: Yes
+Comment: "You'll most likely be teaching the material on your own as her main method of teaching is reading from the slides. However, she will be willing to explain a concept that you're not getting. Personally, I found that the SI sessions helped me more than her lectures as my SI leader gave us practice problems for exams. Extra credit for attendance 5%"
+
+Review 3 - CSE5311 (May 10, 2025)
+Quality: 1.0 | Difficulty: 3.0
+Attendance: Mandatory | For Credit: Yes | Textbook: Yes | Grade: A
+Comment: "Take only as a last resort. Wastes a ton of time on pointless tangents. Has no respect for student's time, will keep talking after the class time ends. Even expects you to be available outside of normal class time. In some of her classes there is a service learning project. If you see this on the syllabus DO NOT TAKE/drop immediately, trust me."
+
+Review 4 - CSE3330 (Apr 30, 2025)
+Quality: 2.0 | Difficulty: 3.0
+Attendance: Mandatory | For Credit: Yes | Textbook: Yes | Grade: A+
+Comment: "Teacher is more focused on creating a heartfelt connection with the student than teaching. +5% on final grade if you came to all classes (huge). She remembers faces and likes to ask lots of questions. 5 exams!! Semester project with 2 people in a group. TAs do all the grading."
+
+Review 5 - CSE3330 (Apr 26, 2025)
+Quality: 4.0 | Difficulty: 3.0
+Attendance: Not Mandatory | For Credit: Yes | Textbook: Yes | Grade: Not yet determined | Would Take Again: Yes
+Comment: "Amazing professor who cares about students. Explains concepts clearly and are practiced in the project. Exams aren't too difficult, if you understand the project. Gives an attendance bonus of 5 points to final grade. Only complaint is alot of class time is lost in rants/discussions. I would have done better if concepts weren't rushed over in class."

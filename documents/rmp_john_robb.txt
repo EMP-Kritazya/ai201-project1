@@ -1,0 +1,49 @@
+RATE MY PROFESSORS - JOHN ROBB
+Source URL: https://www.ratemyprofessors.com/professor/1998025
+
+=== PROFESSOR SUMMARY ===
+Full Name: John Robb
+School: University of Texas at Arlington
+Department: Computer Science
+Overall Quality Rating: 4.6 / 5
+Would Take Again: 91%
+Level of Difficulty: 3.2 / 5
+Total Ratings: 57
+
+Rating Distribution:
+- Awesome (5): 48 ratings
+- Great (4): 3 ratings
+- Good (3): 3 ratings
+- OK (2): 0 ratings
+- Awful (1): 3 ratings
+
+=== STUDENT REVIEWS ===
+
+Review 1 - CSE5321 (Nov 22, 2024)
+Quality: 5.0 | Difficulty: 2.0
+Attendance: Mandatory | For Credit: Yes | Textbook: Yes | Grade: C
+Tags: Participation matters, Extra credit, Amazing lectures
+Comment: Student reflected on attending the class 7 years prior without paying attention, later recognizing its importance. They advised current students to attend carefully and take detailed notes, praising the "amazing lectures."
+
+Review 2 - CSE5321 (Jul 31, 2024)
+Quality: 5.0 | Difficulty: 1.0
+Attendance: Mandatory | For Credit: Yes | Textbook: N/A | Grade: A
+Tags: Group projects, Amazing lectures, Inspirational
+Comment: Student called him "the best professor in Computer Science" with industry experience, praising lectures and assignments as "just perfect" while warning against cheating and attendance fraud.
+
+Review 3 - CSE5321 (Sep 10, 2021)
+Quality: 5.0 | Difficulty: 3.0
+Attendance: Mandatory | For Credit: Yes | Textbook: No | Grade: A
+Tags: Respected, Accessible outside class, Inspirational
+Comment: Student credits him for their industry tester job, expressing regret about his apparent departure from the university.
+
+Review 4 - CSE5321 (Apr 20, 2021)
+Quality: 5.0 | Difficulty: 4.0
+Attendance: Mandatory | For Credit: Yes | Textbook: No | Grade: A
+Tags: Lots of homework, Accessible outside class, Amazing lectures
+Comment: Student ranked him among "the best professors at UTA," highlighting engaging lectures and his effort to ensure comprehension.
+
+Review 5 - CSE5321 (Oct 14, 2020)
+Quality: 1.0 | Difficulty: 5.0
+Attendance: Mandatory | For Credit: Yes | Textbook: No | Grade: Not sure yet
+Comment: Negative review describing challenging explanations, tricky exam questions, and demanding homework requiring substantial effort.

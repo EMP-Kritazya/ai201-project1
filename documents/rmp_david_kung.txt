@@ -1,0 +1,44 @@
+RATE MY PROFESSORS - DAVID KUNG
+Source URL: https://www.ratemyprofessors.com/professor/1226648
+
+=== PROFESSOR SUMMARY ===
+Full Name: David Kung
+School: University of Texas at Arlington
+Department: Computer Science
+Overall Quality Rating: 2.8 / 5
+Would Take Again: 60%
+Level of Difficulty: 3.6 / 5
+Total Ratings: 29
+Top Tags: Group projects, Lecture heavy, Caring
+
+=== STUDENT REVIEWS ===
+
+Review 1 - CSE4361 (Nov 19, 2025)
+Quality: 4.0 | Difficulty: 3.0
+Attendance: Mandatory | For Credit: Yes | Textbook: Yes | Grade: Not sure yet | Would Take Again: Yes
+Tags: Participation matters, Group projects, Lecture heavy
+Comment: "Group assignments, 1 individual HW assignment, exams are open book: sticky notes allowed...be careful when selecting the answers on the exam, he tries to trick students. 85 is an A"
+
+Review 2 - CSE3311 (May 21, 2025)
+Quality: 5.0 | Difficulty: 3.0
+Attendance: Mandatory | For Credit: Yes | Textbook: Yes | Grade: A | Would Take Again: Yes
+Tags: Group projects, Hilarious, Lecture heavy
+Comment: "Professor David is goated tbh. This class was an easy A...exams are open book and multiple choice...Easy grader fs."
+
+Review 3 - CSE4361 (Dec 16, 2024)
+Quality: 4.0 | Difficulty: 3.0
+Attendance: Mandatory | For Credit: Yes | Textbook: Yes | Grade: A | Would Take Again: Yes
+Tags: Group projects, Gives good feedback, Caring
+Comment: "He has many great examples and portrayals of some textbook-abstract concepts...He cares, so should you"
+
+Review 4 - CSE4361 (Oct 13, 2024)
+Quality: 2.0 | Difficulty: 4.0
+Attendance: Mandatory | For Credit: Yes | Textbook: Yes | Grade: Rather not say | Would Take Again: Yes
+Tags: Group projects
+Comment: "Very inconsistent guy. Contradicts himself very often. Lectures were very bad because it lacks in structure...You will probably need to do a lot more outside study."
+
+Review 5 - CSE3311 (Aug 22, 2024)
+Quality: 1.0 | Difficulty: 5.0
+Attendance: Not Mandatory | For Credit: Yes | Textbook: Yes | Grade: B
+Tags: Tough grader, Group projects, Lecture heavy
+Comment: "Take someone else if taking it as a tech elective...The tests however were cancer. You WILL be irritated taking this course with this professor."

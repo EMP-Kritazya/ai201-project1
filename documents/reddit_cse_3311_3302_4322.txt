@@ -1,0 +1,15 @@
+| Review of CSE Courses at UTA
+
+This is my review and what happened with all of these classes I did for this semester, this is not all of my classes of the semester just the relevant ones for CS/SE degree plans, this is most importantly for all the underclassmen freaking out about classes, so I hope this helps y'all.
+
+1. CSE 3311:
+CSE 3311 with David Kung: Grading system is auto curved, so a 60 is a C and an 85 is an A. Grades are 35% team project, 15% Induvial HW, 10% attendance, midterm is 15%, Final is 25%. Class is making a lot of charts and stuff. Teams are assigned, but the team project and HW are mostly completion grades. Exams are very hard due to weird and vague way of the questions. Midterm is 10 question mulita choice; Final (comprehensive) is the same but with 20 questions. Exams are open book, and you can also print pages out of his book and use it. Echo360 is there, Prof himself is decently chill, likes to ramble here and there but overall, he's engaging and likes class participation.
+
+
+2. CSE 3302:
+CSE 3302 with Kelly French: No curve. Grades are 45% for Exams 1,2,3 all worth 15% each. Final is not comprehensive and is worth 20%. HW is 15% within 5 assignments that are released every 2 weeks same with labs but there's only 4 of them. Class is learning concepts and theory of programming. Each exam is randomly chosen if French wants to allow a 8x11 page notecard. Echo360 is there and attendance isn't required, but he does take them every once in a while, for bonus.
+
+
+3. CSE 4322:
+CSE 4322 with Mike Siok: Good chance for curves. Grades are all over the place, pretty much you are going to be in teams of 4, and there will be 4 projects and presentation, each member takes a turn presenting as they act as team leads for it. Exams are worth 20% both midterm and Final is 10% each, done in a lockdown browser with a bunch of Muli choice questions 40-50 of them. And there's HW worth 10% with 3 of them.
+
