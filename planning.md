@@ -9,6 +9,10 @@
 
 ## Domain
 
+Student reviews, ratings, and experiences with professors of Computer Science Department at the University of Texas at Arlington, with a focus on helping students evaluate instructors before registering for their courses.
+
+This knowledge is valuable because it provides insights into teaching style, workload, and all other qualities of the instructor that a student needs, to make informed decision while choosing to take their classes. Official university pages, or instructors profile only provides course descriptions but rarely include any detailed feedback from students who have taken the course. As a result, many students go over various scattered unofficial sources, such as Rate My Professors, and Reddit discussions to make informed decision.
+
 <!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
 
 ---
@@ -18,18 +22,28 @@
 <!-- List your specific sources: URLs, subreddit names, forum threads, or file descriptions.
      Aim for at least 10 sources that together cover different subtopics or perspectives within your domain. -->
 
-| # | Source | Description | URL or location |
-|---|--------|-------------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| #   | Source                                                                 | Description                                                                                                                                                                                                                                               | URL or location                                                                                          |
+| --- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| 1   | Rate My Professor - David Kung                                         | Student ratings and reviews discussing teaching style, workload, grading practices, attendance policy, and experiences in courses taught by this professor, including CSE 4361, CSE 3311, and CSE 4351.                                                   | https://www.ratemyprofessors.com/professor/1226648                                                       |
+| 2   | Rate My Professor - Ishfaq Ahmad                                       | Student ratings and reviews discussing teaching style, workload, grading practices, attendance policy, and experiences in courses taught by this professor, including CSE 6339, CSE 4351, CSE 1311, and CSE 5351.                                         | https://www.ratemyprofessors.com/professor/1444520                                                       |
+| 3   | Rate My Professor - Jimmie Davis                                       | Student ratings and reviews discussing teaching style, workload, grading practices, attendance policy, and experiences in courses taught by this professor, including CSE 3310, and CSE 1106.                                                             | https://www.ratemyprofessors.com/professor/2218914                                                       |
+| 4   | Rate My Professor - Linda Barasch                                      | Student ratings and reviews discussing teaching style, workload, grading practices, attendance policy, and experiences in courses taught by this professor, including CSE 3315, and CSE 1310.                                                             | https://www.ratemyprofessors.com/professor/619690                                                        |
+| 5   | Rate My Professor - Manfred Huber                                      | Student ratings and reviews discussing teaching style, workload, grading practices, attendance policy, and experiences in courses taught by this professor, including CSE 6349, CSE 2312, CSE 2315, CSE 3315, CSE 4360, CSE 4379, CSE 5361, and CSE 5364. | https://www.ratemyprofessors.com/professor/529522                                                        |
+| 6   | Rate My Professor - Donna French                                       | Student ratings and reviews discussing teaching style, workload, grading practices, attendance policy, and experiences in courses taught by this professor, including CSE 1320, CSE 1310, CSE 1325, CSE 2320 and CSE 3318.                                | https://www.ratemyprofessors.com/professor/2346663                                                       |
+| 7   | Rate My Professor - Bob Weems                                          | Student ratings and reviews discussing teaching style, workload, grading practices, attendance policy, and experiences in courses taught by this professor, including CSE 3318, CSE 2302, CSE 2320, CSE 5311, and CSE 3302.                               | https://www.ratemyprofessors.com/professor/432105                                                        |
+| 8   | Rate My Professor - Bahram Khalili                                     | Student ratings and reviews discussing teaching style, workload, grading practices, attendance policy, and experiences in courses taught by this professor, including CSE 3310, CSE 5306, and CSE 5326.                                                   | https://www.ratemyprofessors.com/professor/1055888                                                       |
+| 9   | Rate My Professor - John Robb                                          | Student ratings and reviews discussing teaching style, workload, grading practices, attendance policy, and experiences in courses taught by this professor, including CSE 5321, CSE 3302, CSE 4321, CSE 5234, CSE 5423, and CSE 6329.                     | https://www.ratemyprofessors.com/professor/1998025                                                       |
+| 10  | Rate My Professor - Changekai Li                                       | Student ratings and reviews discussing teaching style, workload, grading practices, attendance policy, and experiences in courses taught by this professor, including CSE 5334, CSE 4334, CSE 3330 and CSE 5344.                                          | https://www.ratemyprofessors.com/professor/1151666                                                       |
+| 11  | Rate My Professor - Marika Apostolova                                  | Student ratings and reviews discussing teaching style, workload, grading practices, attendance policy, and experiences in courses taught by this professor, including CSE 1320, and CSE 1325.                                                             | https://www.ratemyprofessors.com/professor/2925654                                                       |
+| 12  | Rate My Professor - Bhanu Jain                                         | Student ratings and reviews discussing teaching style, workload, grading practices, attendance policy, and experiences in courses taught by this professor, including CSE 1301, CSE 1310, CSE 1320, CSE 3318, CSE 3330 and CSE 5311.                      | https://www.ratemyprofessors.com/professor/2473801                                                       |
+| 13  | Rate My Professor - Vamsikrishna Gopikrishna                           | Student ratings and reviews discussing teaching style, workload, grading practices, attendance policy, and experiences in courses taught by this professor, including CSE 2315, CSE 4308, CSE 5301 and CSE 5360.                                          | https://www.ratemyprofessors.com/professor/2272923                                                       |
+| 14  | Rate My Professor - Nadra Guizani                                      | Student ratings and reviews discussing teaching style, workload, grading practices, attendance policy, and experiences in courses taught by this professor, including CSE 1310, CSE 3310, CSE 3330 and CSE 4309.                                          | https://www.ratemyprofessors.com/professor/2635253                                                       |
+| 15  | Rate My Professor - Abhishek Santra                                    | Student ratings and reviews discussing teaching style, workload, grading practices, attendance policy, and experiences in courses taught by this professor, including CSE 2315, and CSE 5330.                                                             | https://www.ratemyprofessors.com/professor/2774504                                                       |
+| 16  | Reddit - Help in choosing classes based on professors need preferences | Student discussion thread containing recommendations, opinions, and advice regarding CSE 3318, CSE 1325, and CSE 2312.                                                                                                                                    | https://www.reddit.com/r/utarlington/comments/1ps7xnd/help_in_choosing_classes_based_on_professors_need/ |
+| 17  | Reddit - Review of CSE 3311 CSE 3302 CSE 4322                          | Student discussion thread containing review of CSE 3311, CSE 3302, and CSE 4322.                                                                                                                                                                          | https://www.reddit.com/r/utarlington/comments/1kquhqp/review_of_cse_3311_cse_3302_cse_4322/              |
+| 18  | Reddit - CSE 4308                                                      | Student discussion thread containing recommendations, opinions, and advice regarding CSE 4308.                                                                                                                                                            | https://www.reddit.com/r/utarlington/comments/1s8te40/cse_4308/                                          |
+| 19  | Reddit - CSE 3330                                                      | Student discussion thread containing recommendations, opinions, and advice regarding CSE 3330                                                                                                                                                             | https://www.reddit.com/r/utarlington/comments/1omzpnr/cse_3330/                                          |
+| 20  | Reddit - Cse 3315 theoretical                                          | Student discussion thread containing recommendations, opinions, and advice regarding CSE 3315 (Theoritical Concepts in Computer Science and Engineering).                                                                                                 | https://www.reddit.com/r/utarlington/comments/1olduor/cse_3315_theoretical/                              |
 
 ---
 
@@ -40,11 +54,11 @@
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size:**
+**Chunk size:** 300 characters for Rate My Professors reviews; 500 characters for Reddit discussions thread.
 
-**Overlap:**
+**Overlap:** 50 characters for Rate My Professors reviews; 100 characters for Reddit discussions thread.
 
-**Reasoning:**
+**Reasoning:** The majority of the collecton consists of short Rate My Professors reviews, making fixed-size chunking appropriate because these reviews are brief, usually a single opinion and to the point. However, reddit discussions tend to be longer and more conversational, so slightly larger chunks with greater overlap will be used to preserve context across comments and avoid splitting important information.
 
 ---
 
@@ -56,11 +70,11 @@
      would you weigh in choosing a different embedding model — context length, multilingual
      support, accuracy on domain-specific text, latency? -->
 
-**Embedding model:**
+**Embedding model:** all-MiniLM-L6-v2 via sentence-transformers
 
-**Top-k:**
+**Top-k:** 5 most relevant chunks
 
-**Production tradeoff reflection:**
+**Production tradeoff reflection:** If cost and computational constraints were not a concern, larger embedding models with stronger semantic understanding and longer context capabilities could be considered to improve retrieval accuracy.
 
 ---
 
@@ -71,13 +85,13 @@
      is right or wrong. "What are good dining halls?" is too vague.
      "What do students say about wait times at [dining hall name] during lunch?" is testable. -->
 
-| # | Question | Expected answer |
-|---|----------|-----------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| #   | Question                                                                      | Expected answer                                                                                                           |
+| --- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| 1   | How does Professor Manfred Huber typically conduct his lectures?              | He uses little to no slides and primarily teaches by working through mathematical derivations on the whiteboard.          |
+| 2   | Which professor do students commonly recommend for CSE 3318?                  | Students commonly recommend Professor Donna French or Professor Stefan for CSE 3318.                                      |
+| 3   | When do students suggest taking CSE 3318 with Donna French?                   | Students recommend taking CSE 3318 during the summer if the course is available                                           |
+| 4   | How is grading curved in David Kung's CSE 3311 class?                         | The grading scale is automatically curved, with approximately a 60 corresponding to a C and an 85 corresponding to an A.  |
+| 5   | What percentage of students say they would take Abishek Santra's class again? | Approximately 88.9% of students said they would take his class again, and 22 out of 27 students gave him a 5-star rating. |
 
 ---
 
@@ -87,9 +101,9 @@
      Consider: noisy or inconsistent documents, missing source attribution, off-topic
      retrieval, chunks that split key information across boundaries. -->
 
-1.
+1. Conflicting or inconsistent reviews: Students experience can vary significantly. Some might have positive opinion of a professor while other may report negative experience.
 
-2.
+2. Limited or incomplete source material. Some professors or courses may have only a small number of reddit discussion forum posts or reviews available. As a result, the retrieved information may not capture the full range of student experiences and could lead to biased responses.
 
 ---
 
@@ -101,7 +115,7 @@
      You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
      You'll use this diagram as context when prompting AI tools to implement each stage. -->
 
----
+## ![alt text](./PipelineModel.png)
 
 ## AI Tool Plan
 
@@ -116,7 +130,10 @@
      with my specified chunk size and overlap" is a plan. -->
 
 **Milestone 3 — Ingestion and chunking:**
+I will use ChatGPT to help refine my chunking strategy and explain tradeoffs between different chunking approaches based on my document types. I will use Claude for imlementation within my repository by asking it to generate functions that load .txt documents, clean the text, and implement fixed-size chunking according to my specifications. I will verify the output by manually inspecting a sample of generated chunks to ensure they preserve meaningful context and match the intended chunk sizes and overlaps.
 
 **Milestone 4 — Embedding and retrieval:**
+I will use Gemini, ChatGPT and Claude to understand the concepts behind semantic search, ChromaDB, and retrieval settings such as top-k selection. I will provide Claude with the requirements for using the all-MiniLM-L6-v2 embedding model and ChromaDB, and ask it to implement the embedding generation pipeline, populate the vector database, and perform top-k retrieval. I will verify correctness by testing known queries and confirming that the retrieved chunks are relevant and originate from the expected source documents.
 
 **Milestone 5 — Generation and interface:**
+I will use ChatGPT to brainstorm interface ideas, improve prompts, and evaluate the quality of generated responses. I will use Claude to implement the generation pipeline that combines the user's query with retrieved chunks and passes the context to the language model to generate answers. I will verify the implementation by comparing responses against my evaluation questions, checking that answers are grounded in the retrieved sources, and ensuring the system does not fabricate information that is unsupported by the documents.
