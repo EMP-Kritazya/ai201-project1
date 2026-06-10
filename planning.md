@@ -85,13 +85,13 @@ This knowledge is valuable because it provides insights into teaching style, wor
      is right or wrong. "What are good dining halls?" is too vague.
      "What do students say about wait times at [dining hall name] during lunch?" is testable. -->
 
-| #   | Question                                                                      | Expected answer                                                                                                           |
-| --- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| 1   | How does Professor Manfred Huber typically conduct his lectures?              | He uses little to no slides and primarily teaches by working through mathematical derivations on the whiteboard.          |
-| 2   | Which professor do students commonly recommend for CSE 3318?                  | Students commonly recommend Professor Donna French or Professor Stefan for CSE 3318.                                      |
-| 3   | When do students suggest taking CSE 3318 with Donna French?                   | Students recommend taking CSE 3318 during the summer if the course is available                                           |
-| 4   | How is grading curved in David Kung's CSE 3311 class?                         | The grading scale is automatically curved, with approximately a 60 corresponding to a C and an 85 corresponding to an A.  |
-| 5   | What percentage of students say they would take Abishek Santra's class again? | Approximately 88.9% of students said they would take his class again, and 22 out of 27 students gave him a 5-star rating. |
+| #   | Question                                                                      | Expected answer                                                                                                          |
+| --- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| 1   | How does Professor Manfred Huber typically conduct his lectures?              | He uses little to no slides and primarily teaches by working through mathematical derivations on the whiteboard.         |
+| 2   | Which professor do students commonly recommend for CSE 3318?                  | Students commonly recommend Professor Donna French or Professor Stefan for CSE 3318.                                     |
+| 3   | When do students suggest taking CSE 3318 with Donna French?                   | Students recommend taking CSE 3318 during the summer if the course is available                                          |
+| 4   | How is grading curved in David Kung's CSE 3311 class?                         | The grading scale is automatically curved, with approximately a 60 corresponding to a C and an 85 corresponding to an A. |
+| 5   | What percentage of students say they would take Abishek Santra's class again? | Approximately 88.9% of students said they would take his class again.                                                    |
 
 ---
 

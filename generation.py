@@ -158,27 +158,6 @@ def get_groq_client():
 
 
 def generate_answer(question, hits):
-    """Ask Groq to answer the question using ONLY the retrieved chunks.
-
-    Groq API call explained:
-        client.chat.completions.create(...) sends a "chat" request. We provide
-        a list of messages with roles:
-          * "system"  -> the rules the model must always follow (our grounding
-                         instructions).
-          * "user"    -> the actual context + question for this request.
-        The model replies with a message we read at
-        response.choices[0].message.content.
-
-        temperature=0.0 makes the output deterministic (no random creativity),
-        which is what we want for a fact-grounded system.
-
-    Args:
-        question: The user's question.
-        hits:     Retrieved chunks from retrieve() (must be non-empty here).
-
-    Returns:
-        The model's answer text (a string), stripped of surrounding whitespace.
-    """
     client = get_groq_client()
 
     response = client.chat.completions.create(
@@ -195,60 +174,18 @@ def generate_answer(question, hits):
 
 
 def _is_refusal(answer):
-    """Return True if `answer` is (effectively) the standard refusal sentence.
-
-    We compare loosely — ignoring case and a trailing period — so small
-    formatting differences from the model still count as a refusal.
-    """
     normalized = answer.strip().rstrip(".").lower()
     return normalized == REFUSAL_MESSAGE.rstrip(".").lower()
 
-
-# --------------------------------------------------------------------------- #
-# End-to-end orchestration
-# --------------------------------------------------------------------------- #
-
 def format_response(answer, sources):
-    """Assemble the final user-facing string in the required format:
-
-        Answer:
-        <generated answer>
-
-        Sources:
-        - source_1
-        - source_2
-
-    If there are no sources (e.g. the system refused because nothing relevant
-    was retrieved), the Sources section is omitted — listing sources for a
-    "no information" answer would be misleading.
-    """
     parts = [f"Answer:\n{answer}"]
     if sources:
         source_lines = "\n".join(f"- {s}" for s in sources)
         parts.append(f"Sources:\n{source_lines}")
     return "\n\n".join(parts)
 
-
+# Retrieves the k most relevant chunks, builds the ground prompt and calls Groq.
 def answer_question(question, k=DEFAULT_TOP_K):
-    """Run the full Generation stage end-to-end and return a formatted response.
-
-    Steps:
-        1. Retrieve the k most relevant chunks (Milestone 4).
-        2. If nothing was retrieved, refuse immediately (never call the LLM, so
-           it cannot answer from outside knowledge).
-        3. Build the grounded prompt and call Groq.
-        4. If the model refused, drop the source list (the answer isn't grounded
-           in those chunks).
-        5. Otherwise attach the programmatic source list.
-        6. Return the formatted "Answer / Sources" string.
-
-    Args:
-        question: The user's natural-language question.
-        k:        How many chunks to retrieve (default = planning.md top-k = 5).
-
-    Returns:
-        The formatted response string.
-    """
     answer, sources = _answer_and_sources(question, k)
     return format_response(answer, sources)
 
@@ -361,7 +298,7 @@ def _run_validation():
         "When do students suggest taking CSE 3318 with Donna French?",
         "How is grading curved in David Kung's CSE 3311 class?",
         "What percentage of students say they would take Abhishek Santra's class again?",
-        "What is the capital of France?",  # out-of-domain -> must refuse
+        "What is the capital of France?",  # This question is out-of-domain so the model must refuse on answering it.
     ]
 
     # Threshold below which we warn that the answer may not be grounded.
