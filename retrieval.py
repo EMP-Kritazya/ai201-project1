@@ -5,7 +5,7 @@ import chromadb
 from sentence_transformers import SentenceTransformer
 
 # --------------------------------------------------------------------------- #
-# Configuration (sourced from planning.md > Retrieval Approach)
+# Configuration
 # --------------------------------------------------------------------------- #
 
 # Embedding model, loaded exactly as the spec requires.
@@ -25,9 +25,6 @@ _model = None
 _collection = None
 
 
-# --------------------------------------------------------------------------- #
-# Embedding
-# --------------------------------------------------------------------------- #
 
 def get_embedding_model():
     """Return a cached SentenceTransformer instance.
@@ -71,10 +68,6 @@ def embed_texts(texts):
     )
     return embeddings.tolist()
 
-
-# --------------------------------------------------------------------------- #
-# Vector store (ChromaDB)
-# --------------------------------------------------------------------------- #
 
 def get_collection(persist_dir=PERSIST_DIR, collection_name=COLLECTION_NAME):
     """Open (or create) the persistent ChromaDB collection.
@@ -160,10 +153,6 @@ def index_chunks(chunks, batch_size=64):
     return len(chunks)
 
 
-# --------------------------------------------------------------------------- #
-# Retrieval
-# --------------------------------------------------------------------------- #
-
 def retrieve(query: str, k: int = 5):
     """Retrieve the top-k most semantically similar chunks for a query.
 
@@ -228,10 +217,6 @@ def retrieve(query: str, k: int = 5):
         })
     return hits
 
-
-# --------------------------------------------------------------------------- #
-# Validation / manual inspection
-# --------------------------------------------------------------------------- #
 
 def _run_validation():
     """Index the Milestone 3 chunks, then run sample queries and print results."""

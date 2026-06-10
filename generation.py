@@ -32,9 +32,7 @@ ENV_PATH = Path(__file__).parent / ".env"
 _client = None
 
 
-# --------------------------------------------------------------------------- #
-# Prompt construction (the heart of grounding)
-# --------------------------------------------------------------------------- #
+# Prompt Construction for our Agent. This is almost as the heart of grounding our LLM
 
 # This is the what we feed our model to act as. We define its role and what it shall keep in mind when answering
 SYSTEM_PROMPT = (
@@ -96,11 +94,6 @@ def build_user_prompt(question, hits):
         f"not contain the answer, reply exactly: {REFUSAL_MESSAGE}"
     )
 
-
-# --------------------------------------------------------------------------- #
-# Source attribution (built in Python, not by the model)
-# --------------------------------------------------------------------------- #
-
 def extract_sources(hits):
     """Return the unique source filenames from the retrieved chunks, in order.
 
@@ -124,10 +117,6 @@ def extract_sources(hits):
             sources.append(source)
     return sources
 
-
-# --------------------------------------------------------------------------- #
-# Groq client + generation
-# --------------------------------------------------------------------------- #
 
 def get_groq_client():
     """Return a cached Groq client, loading GROQ_API_KEY from .env on first use.
@@ -234,9 +223,6 @@ def answer_with_sources(question, k=DEFAULT_TOP_K):
     return {"answer": answer, "sources": sources}
 
 
-# --------------------------------------------------------------------------- #
-# Validation — at least 3 end-to-end queries with a grounding check
-# --------------------------------------------------------------------------- #
 
 def _grounding_overlap(answer, hits):
     """Heuristic: fraction of the answer's content words that appear in context.

@@ -12,8 +12,8 @@ DOCUMENTS_DIR = Path(__file__).parent / "documents"
 
 # Structure-aware chunking config.
 #
-# We no longer cut documents on a fixed character window. Instead each document
-# is split on its *natural* units — one Rate My Professors review per chunk, one
+# We are no longer cutting documents on a fixed character window. Instead each document
+# is split on its natural units — one Rate My Professors review per chunk, one
 # Reddit reply/comment per chunk — so a chunk embeds one complete opinion.
 #
 # A single review or reply only falls back to fixed-size chunking when it is
@@ -28,10 +28,7 @@ FALLBACK_OVERLAP = 100     # characters shared between consecutive fallback chun
 DEFAULT_SOURCE_TYPE = "ratemyprofessors"
 
 
-# --------------------------------------------------------------------------- #
-# Stage 1 — Document loading
-# --------------------------------------------------------------------------- #
-
+# Loading documents
 def detect_source_type(source):
     """Infer the source type from a file's name.
 
@@ -91,12 +88,8 @@ def load_documents(documents_dir=DOCUMENTS_DIR):
             continue
 
         try:
-            # Read the full file as UTF-8 text. The default errors="strict"
-            # means malformed bytes raise instead of being silently dropped.
             raw_text = file_path.read_text(encoding="utf-8")
         except (OSError, UnicodeDecodeError) as error:
-            # Error handling: an unreadable or non-UTF-8 file shouldn't crash
-            # the whole ingestion run. Log it and move on to the next file.
             print(f"[load_documents] Skipping unreadable file {file_path}: {error}")
             continue
 
@@ -105,9 +98,6 @@ def load_documents(documents_dir=DOCUMENTS_DIR):
             print(f"[load_documents] Skipping empty file: {file_path}")
             continue
 
-        # Use the path relative to documents_dir as the source identifier. This
-        # keeps names unique even when files live in subfolders, while remaining
-        # human-readable (e.g. "rmp_david_kung.txt").
         source = str(file_path.relative_to(documents_dir))
 
         documents.append({
@@ -120,11 +110,7 @@ def load_documents(documents_dir=DOCUMENTS_DIR):
     print(f"[load_documents] Loaded {len(documents)} document(s) from {documents_dir}")
     return documents
 
-
-# --------------------------------------------------------------------------- #
-# Stage 1b — Cleaning
-# --------------------------------------------------------------------------- #
-
+# Clean txt files
 def clean_text(raw_text):
     """Clean a document's text while preserving its meaningful content.
 
@@ -175,10 +161,7 @@ def clean_text(raw_text):
     return text.strip()
 
 
-# --------------------------------------------------------------------------- #
-# Stage 2 — Chunking
-# --------------------------------------------------------------------------- #
-
+# Chunking Stage
 def chunk_text(text, chunk_size, overlap):
     """Split text into fixed-size, character-based chunks with overlap.
 
@@ -413,11 +396,7 @@ def build_chunks(documents):
 
     return all_chunks
 
-
-# --------------------------------------------------------------------------- #
-# Validation / manual inspection
-# --------------------------------------------------------------------------- #
-
+# Validation
 def _print_sample_chunks(chunks, source_type, label, limit=5):
     """Print up to `limit` chunks of one source type, spread across the set.
 

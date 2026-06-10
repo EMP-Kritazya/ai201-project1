@@ -1,17 +1,3 @@
-"""Milestone 5 — Query Interface (Gradio web UI).
-
-This is the user-facing front door to the RAG pipeline. It does NOT contain any
-retrieval or generation logic itself — that all lives in generation.py. This
-file's only job is to take a typed question, hand it to the end-to-end function,
-and display the grounded answer plus its source list.
-
-Run it with:
-
-    python app.py
-
-then open http://localhost:7860 in a browser.
-"""
-
 import gradio as gr
 
 # answer_with_sources(question) runs the whole pipeline (retrieve -> ground ->
@@ -49,10 +35,6 @@ def handle_query(question):
 
     return result["answer"], sources
 
-
-# --------------------------------------------------------------------------- #
-# Layout: a question box, an Ask button, and two read-only output boxes.
-# --------------------------------------------------------------------------- #
 
 with gr.Blocks(title="UTA CS Professor Reviews") as demo:
     gr.Markdown(
